@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            background-image: url(#);
+            background-size: cover;
+        }
+        nav {
+            position: fixed;
+            z-index: 99;
+            width: 100%;
+            background: #242526;
+        }
+        nav .wrapper {
+            position: relative;
+            max-width: 1300px;
+            padding: 0px 30px;
+            height: 70px;
+            line-height: 70px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .wrapper .logo a {
+            color: #f2f2f2;
+            font-size: 30px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .wrapper .nav-links {
+            display: inline-flex;
+        }
+        .nav-links li {
+            list-style: none;
+        }
+        .nav-links li a {
+            color: #f2f2f2;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 9px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .nav-links li a:hover {
+            background: #3A3B3C;
+        }
+        .body-container {
+            position: absolute;
+            height: 60%;
+            width: 90%;
+            top: 20%;
+            left: 5%;
+            background-color: #000;
+            color: #fff;
+            padding: 50px;
+            text-align: justify;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="#"></a></div>
+            <ul class="nav-links">
+                <li><a href="/">Back</a></li>
+                <li><a href="#">Abstract</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="body-container">
+        <p>
+            Phishing attacks present an ongoing and ever-evolving threat within the realm of cybersecurity. These deceptive tactics aim to dupe unsuspecting individuals into revealing sensitive information, such as passwords, financial details, or personal data. With the expansion of online communication channels and the increasing sophistication of phishing techniques, conventional detection methods often struggle to keep pace with the dynamic landscape of cyber threats.
+
+In response to this pressing issue, this project proposes the development and deployment of a machine learning model explicitly designed to differentiate between legitimate websites and phishing websites. The research initiative entails compiling a comprehensive dataset containing a diverse range of features, including URL structures, domain age, and website content, associated with both authentic and fraudulent online platforms. Through meticulous analysis of these features, the machine learning algorithm will undergo training to identify subtle yet discernible patterns and characteristics indicative of phishing activities.
+
+The successful execution of this project holds considerable promise for enhancing cybersecurity defenses against the widespread threat of phishing attacks. By harnessing the capabilities of machine learning, users can be better equipped to recognize and counter the risks posed by malicious online activities, thereby strengthening the protection of sensitive information and bolstering overall digital security.
+            </p>
+    </div>
+</body>
+</html>

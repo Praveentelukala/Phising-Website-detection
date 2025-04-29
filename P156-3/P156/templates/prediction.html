@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Website Detector</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body{
+      background-image: url(https://img.freepik.com/free-vector/blank-blue-halftone-background_53876-114466.jpg);
+      background-size: cover;
+    }
+    nav {
+      position: fixed;
+      z-index: 99;
+      width: 100%;
+      background: #242526;
+    }
+    nav .wrapper {
+      position: relative;
+      max-width: 1300px;
+      padding: 0px 30px;
+      height: 70px;
+      line-height: 70px;
+      margin: auto; 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .wrapper .nav-links {
+      display: inline-flex;
+    }
+    .nav-links li {
+      list-style: none;
+    }
+    .nav-links li a {
+      color: #f2f2f2;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 9px 15px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .nav-links li a:hover {
+      background: #3A3B3C;
+    }
+    .body-container {
+      position: absolute;
+      height: 60%;
+      width: 90%;
+      top: 15%;
+      left: 5%;
+      background-color: #2c54a076;
+      color: #fff;
+      padding: 50px;
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    p{margin-bottom: 5px;}
+    h2{margin-bottom: 5px;}
+ 
+    .body-container input[type="text"] {
+      width:100%; /* Adjusted width to accommodate buttons */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-bottom: 10px; /* Added margin bottom */
+    }
+    .sub-button{background-color: #3A3B3C;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+      width: 150px;
+      margin-top: 6px;
+      margin-bottom: 5px; }
+
+      .sub-button:hover {background-color: #7e7e7e;}
+    .button {
+      display: flex;
+      flex-direction: row;
+      text-align: center; /* Center horizontally */
+    }
+    .button button {
+      background-color: #3A3B3C;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+      width: 100px;
+      margin-top: 6px;
+      margin-bottom: 5px;
+    }
+
+    .button button:hover {background-color: #7e7e7e;}
+    .form-group{
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+    }
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrapper">
+      <ul class="nav-links">
+        <li><a href="#">Prediction</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="body-container">
+    <h2>Phishing Website Detector</h2>
+    <p>
+      Enter the URL of a website you want to check:
+    </p>
+    
+      <form method="post" action="prediction" class="form-group">
+        <input type="text" name="url" id="url-input" placeholder="Enter URL here"  value="{{ url }}">
+        <button class="sub-button" type="submit">Submit URL</button>
+      </form><br>
+      <h4 style="margin: 0%;" id="result">{{r}}</h4><br> 
+      <div class="button">
+        <form method="post" action="check">
+          <button type="submit">Check</button>
+        </form>    
+        <form method="post" action="flag">
+          <button type="submit">Flag</button>
+        </form>
+        <form method="post" action="visitlink">
+          <button type="submit">Visit Link</button>
+        </form>
+        <form method="post" action="clear">
+          <button type="submit">Clear</button>
+        </form>
+        <form method="post" action="/back_home">
+          <button type="submit" style="width: 40%; margin-left: 420px;">Back to Home</button>
+        </form>
+      </div>
+  </div>
+</body>
+</html>
